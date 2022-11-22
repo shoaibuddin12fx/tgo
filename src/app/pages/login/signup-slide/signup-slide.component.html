@@ -1,0 +1,44 @@
+<form [formGroup]="aForm">
+  <div class="poppins medium login-component-heading">Create Your Account</div>
+  <div class="ibox-inputs signup">
+    <app-icon-input-box
+      [leftIcon]="'person'"
+      [placeholder]="'Full Name'"
+    ></app-icon-input-box>
+    <app-icon-input-box
+      [leftIcon]="'mail'"
+      [placeholder]="'Email Address'"
+    ></app-icon-input-box>
+    <app-icon-input-box
+      [leftIcon]="'call'"
+      [placeholder]="'Phone Number'"
+    ></app-icon-input-box>
+    <app-icon-input-box
+      [leftIcon]="'lock-closed'"
+      [placeholder]="'Password'"
+      [rightIcon]="'eye'"
+    ></app-icon-input-box>
+  </div>
+  <div class="b-button-outer">
+    <ion-button
+      class="volvo b-button"
+      shape="round"
+      expand="block"
+      color="secondary"
+    >
+      SIGNUP
+    </ion-button>
+  </div>
+
+  <div class="dnt-div">
+    <div class="label-box-58" (click)="gotoLoginEvent()">
+      <ion-text class="f-pop-li poppins" style="margin-right: 5px">
+        Already have an account?<br />
+      </ion-text>
+      <ion-text class="sign1 f-pop-m poppins semibold" color="primary"
+        >Login</ion-text
+      >
+    </div>
+  </div>
+  <!--  -->
+</form>

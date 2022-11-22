@@ -1,0 +1,70 @@
+<ion-header>
+  <div class="b-header-output">
+    <div class="b-header-main">
+      <div class="menu-icon-outer">
+        <ion-buttons slot="start" (click)="back()">
+          <ion-button>
+            <ion-icon color="light" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <h4>Menu Details</h4>
+      </div>
+      <div class="main-icon-outer"></div>
+      <div class="combined-icons">
+        <div class="shop-icon-outer">
+          <img src="assets/icons/cart-small.png" />
+        </div>
+        <div class="bell-icon-outer">
+          <img src="assets/icons/bell-small.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="main-menu-img">
+    <ion-card class="image-card">
+      <img
+        alt="Silhouette of mountains"
+        src="assets/images/home/square-images/main-menu-img.png"
+      />
+    </ion-card>
+    <div class="content-outer">
+      <h5 class="heading poppins semibold">CHILE CON QUESO & CHIPS</h5>
+      <p class="subheading poppins medium">
+        Our homemade chile con queso topped with pico de gallo & queso fresco
+      </p>
+
+      <div class="price-box">
+        <div class="single-box-price">
+          <div class="price-text poppins semibold">Regular</div>
+          <div class="mid-line-box">
+            <div class="line43"></div>
+          </div>
+          <div class="price-rate">
+            <ion-text color="primary">$8.99</ion-text>
+          </div>
+        </div>
+        <div class="single-box-price">
+          <div class="price-text poppins semibold">Large</div>
+          <div class="mid-line-box">
+            <div class="line43"></div>
+          </div>
+          <div class="price-rate">
+            <ion-text color="primary">$8.99</ion-text>
+          </div>
+        </div>
+      </div>
+
+      <ion-button shape="round" color="secondary" class="adc-btn volvo">
+        ADD TO CART
+      </ion-button>
+
+      <div class="menu-items-outer">
+        <h5 class="heading poppins semibold">Related Items</h5>
+        <app-menu-list-items></app-menu-list-items>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-content fullscreen="true" class="dark-background" [scrollY]="false">
+  <!-- [style.background-image]="'url('+ fullbackground +')'" -->
+  <!-- <div
+    class="fullbg"
+  ></div> -->
+  <img
+    class="fullbg"
+    [hidden]="!bgLoaded"
+    [src]="fullbackground"
+    (load)="updateBackgroundView()"
+  />
+  <div class="center-div">
+    <img [src]="long_logo" [class.slide-in-bottom]="showLogButtons" />
+    <div class="button-div-outer slide-in-bottom" [hidden]="!showLogButtons">
+      <ion-button
+        class="volvo mp-buttons login"
+        shape="round"
+        (click)="navigate('login')"
+        >LOGIN</ion-button
+      >
+      <ion-button
+        class="volvo mp-buttons signup"
+        shape="round"
+        color="secondary"
+        (click)="navigate('signup')"
+        >SIGNUP</ion-button
+      >
+    </div>
+  </div>
+  <!-- <div class="overlay-image">
+    <img
+      class="ov-logo fade-in"
+      *ngIf="showLogo"
+      src="/assets/background.jpg"
+    />
+  </div> -->
+  <!-- <img [src]="" class="center-logo-image" /> -->
+</ion-content>

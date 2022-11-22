@@ -1,0 +1,36 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="nav.pop()">
+        <ion-icon color="medium" name="arrow-back-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col class="logo-col" size="12">
+        <img [src]="long_logo" />
+      </ion-col>
+    </ion-row>
+
+    <swiper class="swiper-outer" #swiper>
+      <ng-template swiperSlide class="swiper-inner">
+        <app-login-slide
+          (gotoSignup)="gotoSignup()"
+          (gotoDashboard)="gotoDashboard()"
+          class="w-100"
+        ></app-login-slide>
+      </ng-template>
+      <ng-template swiperSlide class="swiper-inner">
+        <app-signup-slide
+          (gotoLogin)="gotoLogin()"
+          class="w-100"
+        ></app-signup-slide>
+      </ng-template>
+      <ng-template swiperSlide class="swiper-inner">Slide 3</ng-template>
+    </swiper>
+  </ion-grid>
+</ion-content>

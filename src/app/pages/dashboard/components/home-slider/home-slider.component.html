@@ -1,0 +1,15 @@
+<div class="home-slider-outer">
+  <div class="halfway-background"></div>
+  <div class="main-slider">
+    <swiper class="swiper-outer" #swiper>
+      <ng-template swiperSlide class="swiper-inner" *ngFor="let item of slides">
+        <div
+          class="content-outer slider-cover-background"
+          [style.background]="'url(' + item.image + ')'"
+        >
+          <!-- <img class="slider-image" [src]="item.image" /> -->
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>

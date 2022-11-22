@@ -1,0 +1,27 @@
+.home-slider-outer {
+  position: relative;
+}
+.main-slider {
+  padding: 20px;
+}
+
+.content-outer {
+  background-color: red;
+  width: 100%;
+  padding-top: 49.85%; /* w 335 h 167 ~ 0.4985  1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+  border-radius: 20px;
+}
+.slider-cover-background {
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.halfway-background {
+  height: 120px;
+  background: var(--ion-color-tertiary);
+  border-radius: 0 0 25px 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
