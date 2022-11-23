@@ -15,4 +15,7 @@ export class MenuDetailsPage extends BasePage implements OnInit {
   back() {
     this.nav.pop();
   }
+  addToCart() {
+    this.nav.push('pages/cart');
+  }
 }
