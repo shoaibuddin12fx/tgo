@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BasePage } from '../base-page/base-page';
+import { CartPage } from '../cart/cart.page';
 
 @Component({
   selector: 'app-menu-details',
@@ -16,6 +17,7 @@ export class MenuDetailsPage extends BasePage implements OnInit {
     this.nav.pop();
   }
   addToCart() {
-    this.nav.push('pages/cart');
+    // this.nav.push('pages/cart');
+    this.modals.present(CartPage);
   }
 }

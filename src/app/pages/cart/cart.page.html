@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <div class="b-header-output">
     <div class="b-header-main">
       <div class="menu-icon-outer">
@@ -10,15 +10,22 @@
         <h4>cart</h4>
       </div>
       <div class="main-icon-outer"></div>
-      <div class="combined-icons">
-        <div class="shop-icon-outer">
-          <img src="assets/icons/cart-small.png" />
-        </div>
-        <div class="bell-icon-outer">
-          <img src="assets/icons/bell-small.png" />
-        </div>
-      </div>
     </div>
   </div>
-</ion-header>
-<app-cart-list-item></app-cart-list-item>
+</ion-header> -->
+<ion-content>
+  <swiper class="swiper-outer" #swiper>
+    <ng-template swiperSlide class="swiper-inner">
+      <app-cc-cart-slide></app-cc-cart-slide>
+    </ng-template>
+    <ng-template swiperSlide class="swiper-inner">
+      <app-cc-checkout-slide></app-cc-checkout-slide>
+    </ng-template>
+    <ng-template swiperSlide class="swiper-inner">
+      <app-cc-payment-slide></app-cc-payment-slide>
+    </ng-template>
+    <ng-template swiperSlide class="swiper-inner">
+      <app-cc-result-slide></app-cc-result-slide>
+    </ng-template>
+  </swiper>
+</ion-content>

@@ -19,6 +19,7 @@ import {
   NativePageTransitions,
   NativeTransitionOptions,
 } from '@awesome-cordova-plugins/native-page-transitions/ngx';
+import { CartPageModule } from './pages/cart/cart.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +31,7 @@ import {
     AppRoutingModule,
     HttpClientModule,
     SwiperModule,
+    CartPageModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
