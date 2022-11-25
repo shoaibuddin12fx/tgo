@@ -1,0 +1,34 @@
+
+
+[
+    {
+        "name" : "TACO AL ADOBO",
+        "url" : "../../../../assets/images/tocos/toco-al-adobo.svg"
+    },
+    
+    {
+        "name" : "PEPE'S FAJITA TACO",
+        "url" : "../../../../assets/images/tocos/pepes-fajita-toco.svg"
+    },
+    
+    {
+        "name" : "TEXMEX TACO",
+        "url" : "../../../../assets/images/tocos/texmex-toco.svg"
+    },
+    
+    {
+        "name" : "BAJA TACO",
+        "url" : "../../../../assets/images/tocos/baja-toco.svg"
+    },
+    
+    {
+        "name" : "TEXAS BBQ TACO",
+        "url" : "../../../../assets/images/tocos/texas-bbq-toco.svg"
+    },
+    
+    {
+        "name" : "ROADRUNNER TACO",
+        "url" : "../../../../assets/images/tocos/roadrunner-toco.svg"
+    }
+    
+]

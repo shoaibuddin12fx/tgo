@@ -14,6 +14,8 @@
       [leftIcon]="'lock-closed'"
       [placeholder]="'Password'"
       [rightIcon]="'eye'"
+      [type]="passwordType"
+      (lefticonClicks)="addItem()"
     ></app-icon-input-box>
   </div>
   <div class="b-button-outer">

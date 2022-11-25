@@ -4,10 +4,15 @@
       <ion-icon class="licon" [name]="leftIcon" [color]="color"></ion-icon>
     </div>
     <div class="center-input-box">
-      <input class="cinput poppins" [placeholder]="placeholder" />
+      <input class="cinput poppins" [placeholder]="placeholder" [type]="type" />
     </div>
     <div class="right-icon-box">
-      <ion-icon class="ricon" [name]="rightIcon" [color]="color"></ion-icon>
+      <ion-icon
+        class="ricon"
+        [name]="rightIcon"
+        [color]="color"
+        (click)="lefticonClick()"
+      ></ion-icon>
     </div>
   </div>
 </div>

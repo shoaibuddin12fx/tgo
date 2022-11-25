@@ -1,3 +1,81 @@
-<p>
-  cc-payment-slide works!
-</p>
+<ion-header>
+  <div class="b-header-output">
+    <div class="b-header-main">
+      <div class="menu-icon-outer">
+        <ion-buttons slot="start">
+          <ion-button (click)="closeModal()">
+            <ion-icon color="light" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <h4>Payment</h4>
+      </div>
+      <div class="main-icon-outer"></div>
+    </div>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="pmt-outer">
+    <div class="options-outer">
+      <div class="option-654">
+        <ion-button
+          shape="round"
+          class="volvo"
+          [color]="activePaymentOption == 1 ? 'primary' : 'light'"
+          >Cash</ion-button
+        >
+      </div>
+      <div class="option-654">
+        <ion-button
+          shape="round"
+          class="volvo"
+          [color]="activePaymentOption == 2 ? 'primary' : 'light'"
+          >Credit Card</ion-button
+        >
+      </div>
+      <div class="option-654">
+        <ion-button
+          shape="round"
+          class="volvo"
+          [color]="activePaymentOption == 3 ? 'primary' : 'light'"
+          >PayPal</ion-button
+        >
+      </div>
+    </div>
+    <div class="credit-card-container">
+      <img src="../../../../assets/images/icons/credit-card.svg" />
+    </div>
+    <div class="payment-methods">
+      <div class="heading">
+        <h1 class="volvo" style="font-size: 20px">Payment Methods</h1>
+      </div>
+      <div class="card-name-container" style="margin-top: 28px">
+        <span class="sub-div1">Name on card</span>
+        <span class="sub-div2">John Smith</span>
+      </div>
+      <div class="card-name-container" style="margin-top: 28px">
+        <span class="sub-div1">Card Number</span>
+        <span class="sub-div2">1234 5678 9012 3456</span>
+      </div>
+      <div class="expire-cvv" style="margin-top: 28px">
+        <div class="card-name-container" style="width: 55%">
+          <span class="sub-div1">Expire</span>
+          <span class="sub-div2">10/02/2024</span>
+        </div>
+        <div class="card-name-container" style="width: 35%">
+          <span class="sub-div1">CVV</span>
+          <span class="sub-div2">1234</span>
+        </div>
+      </div>
+      <div class="button-div" style="margin-top: 48px">
+        <ion-button shape="round" class="volvo add">+ Add New Card</ion-button>
+        <ion-button
+          shape="round"
+          color="secondary"
+          class="volvo update"
+          (click)="openCheckout()"
+          >Update Card</ion-button
+        >
+      </div>
+    </div>
+  </div>
+</ion-content>

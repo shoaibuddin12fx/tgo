@@ -1,31 +1,5 @@
 <div class="menu-list-items-outer">
-  <div class="menu-list-item" *ngFor="let item of [1, 2, 3]">
-    <div
-      class="image-outer-box"
-      [style.background]="'url(assets/images/home/square-images/food.png)'"
-    ></div>
-    <div class="text-box-outer">
-      <div class="text-box-inner">
-        <div class="heading-544 poppins semibold">
-          FRESH GUACAMOLE AND CHIPS
-        </div>
-        <div class="price-line-544">
-          <div class="pl-box-255 poppins medium">Regular</div>
-          <div class="pl-box-256 poppins medium">$8.99</div>
-        </div>
-        <!-- <div class="price-line-544">
-          <div class="pl-box-255 poppins medium">Large</div>
-          <div class="pl-box-256 poppins medium">$8.99</div>
-        </div> -->
-      </div>
-      <div class="quantity-outer">
-        <img src="../../../assets/icons/Icon material-delete.png" />
-        <div class="quantity-main">
-          +
-          <div class="quantity">1</div>
-          -
-        </div>
-      </div>
-    </div>
+  <div class="menu-list-item" *ngFor="let item of list">
+    <app-cart-item [item]="item"></app-cart-item>
   </div>
 </div>

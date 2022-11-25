@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>location</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="categories-location-outer">
+    <h4 class="volvo">Our Taco Shops</h4>
+  </div>
+  <ion-grid class="list-root-outer">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of slides" class="col-outer-box">
+        <app-item-box-ph style="width: 100%" [item]="item"></app-item-box-ph>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

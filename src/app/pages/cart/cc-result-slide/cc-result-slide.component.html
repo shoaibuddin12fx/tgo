@@ -1,3 +1,24 @@
-<p>
-  cc-result-slide works!
-</p>
+<div class="full-page-result">
+  <div class="center-box-outer">
+    <div class="icon-box">
+      <ion-icon name="checkmark-circle" color="primary"></ion-icon>
+    </div>
+    <div class="text-box">
+      <h2 class="heading-325 volvo">Order Placed!</h2>
+      <p class="poppins">
+        Your order was placed successfully. For more details, check Delivery
+        Status under Profile tab
+      </p>
+    </div>
+    <div class="button-box">
+      <ion-button
+        color="secondary"
+        shape="round"
+        expand="block"
+        class="volvo"
+        (click)="openCheckout()"
+        >DELIVERY STATUS</ion-button
+      >
+    </div>
+  </div>
+</div>

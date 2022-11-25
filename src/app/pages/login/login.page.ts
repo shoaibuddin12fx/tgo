@@ -1,4 +1,10 @@
-import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Injector,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { Browser } from '@capacitor/browser';
 import { BasePage } from '../base-page/base-page';
@@ -18,7 +24,7 @@ import SwiperCore, { Swiper, Virtual } from 'swiper';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage extends BasePage implements OnInit, ViewWillEnter {
+export class LoginPage extends BasePage implements OnInit, AfterViewInit {
   long_logo;
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
@@ -26,6 +32,19 @@ export class LoginPage extends BasePage implements OnInit, ViewWillEnter {
   constructor(injector: Injector, private iab: InAppBrowser) {
     super(injector);
     this.initialize();
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      const param = this.nav.getQueryParams();
+      console.log(param);
+      if (param['num'] == '1') {
+        this.swiper?.swiperRef.slideTo(1);
+      }
+      if (param['num'] == '0') {
+        this.swiper?.swiperRef.slideTo(0);
+      }
+    }, 500);
   }
 
   async initialize() {

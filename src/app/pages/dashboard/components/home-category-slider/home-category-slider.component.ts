@@ -11,11 +11,11 @@ import { SwiperComponent } from 'swiper/angular';
 export class HomeCategorySliderComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   config: SwiperOptions = {
-    slidesPerView: 3.5,
-    spaceBetween: 12,
-    navigation: true,
+    slidesPerView: 4,
+    spaceBetween: 40,
+    navigation: false,
     // pagination: { clickable: true },
-    scrollbar: { draggable: true },
+    scrollbar: { draggable: false },
   };
   slides: any[] = [];
   constructor(private dataService: DataService) {

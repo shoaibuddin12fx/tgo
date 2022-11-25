@@ -40,7 +40,7 @@ export class SplashPage extends BasePage implements OnInit {
         if (token && token != '1') {
           console.log('TOKEN iS ', token);
 
-          let isAuthenticated = await this.users.getIsAuthenticated();
+           let isAuthenticated = await this.users.getIsAuthenticated();
           if (isAuthenticated) {
             this.navigate('home');
             this.menuCtrl.enable(true, 'main');
@@ -54,8 +54,8 @@ export class SplashPage extends BasePage implements OnInit {
     */
   }
 
-  navigate(page) {
-    this.nav.push(`pages/${page}`);
+  navigate(page, n) {
+    this.nav.push(`pages/${page}`, { num: n });
   }
 
   updateBackgroundView() {

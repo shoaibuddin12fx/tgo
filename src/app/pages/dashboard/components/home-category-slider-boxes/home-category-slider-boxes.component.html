@@ -1,8 +1,16 @@
 <div class="home-category-slider-box-outer">
   <div class="category-slider-outer">
-    <div class="heading volvo">Our Taco Shops</div>
+    <div class="heading volvo">
+      Our Taco Shops
+      <img src="../../../../../assets/images/icons/location.svg" />
+    </div>
     <swiper [config]="config" class="swiper-outer" #swiper>
-      <ng-template swiperSlide class="swiper-inner" *ngFor="let item of slides">
+      <ng-template
+        swiperSlide
+        class="swiper-inner"
+        *ngFor="let item of slides"
+        (click)="menuDetails()"
+      >
         <div class="item-box-outer">
           <div class="image-box">
             <!-- [style.background]="'url(' + item.image + ')'" -->

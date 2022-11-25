@@ -1,9 +1,74 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>user</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="content-outer">
+    <div class="heading-box">
+      <h4 class="heading-875 volvo">User Profile</h4>
+      <div class="ion-item-box">
+        <div class="image-box">
+          <img src="assets/images/sampleuser.png" />
+        </div>
+        <div class="text-box">
+          <div class="text-box-inner">
+            <h2 class="poppins semibold">John Smith</h2>
+            <p class="poppins medium">john_smith22@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="wish-box">
+      <div class="wish-box-inner">
+        <div class="wish-card-box">
+          <img src="assets/images/icons/heart.svg" />
+          <h2 class="volvo">Wishlist</h2>
+        </div>
+        <div class="wish-card-box">
+          <img src="assets/images/icons/voucher.svg" />
+          <h2 class="volvo">Voucher</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-up-box-list">
+      <div class="line-up-box-item">
+        <div class="first-section">
+          <img src="assets/images/icons/order.svg" />
+          <h2 class="poppins medium">Order History</h2>
+        </div>
+        <div class="second-section">
+          <img src="assets/images/icons/aero.svg" />
+        </div>
+      </div>
+      <div class="line-up-box-item">
+        <div class="first-section">
+          <img src="assets/images/icons/user.svg" />
+          <h2 class="poppins medium">Edit Profile</h2>
+        </div>
+        <div class="second-section">
+          <img src="assets/images/icons/aero.svg" />
+        </div>
+      </div>
+      <div class="line-up-box-item">
+        <div class="first-section">
+          <img src="assets/images/icons/notification.svg" />
+          <h2 class="poppins medium">Notification</h2>
+        </div>
+        <div class="second-section">
+          <img src="assets/images/icons/aero.svg" />
+        </div>
+      </div>
+      <div class="extra-height"></div>
+      <div class="line-up-box-item" (click)="logout()">
+        <div class="first-section">
+          <img src="assets/images/icons/logout.svg" />
+          <h2 class="poppins medium">Log Out</h2>
+        </div>
+        <div class="second-section">
+          <img src="assets/images/icons/aero.svg" />
+        </div>
+      </div>
+      <div class="line-up-box-item"></div>
+      <div class="line-up-box-item"></div>
+      <div class="line-up-box-item"></div>
+    </div>
+  </div>
 </ion-content>

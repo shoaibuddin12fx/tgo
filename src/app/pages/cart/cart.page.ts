@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalService } from 'src/app/services/basic/modal.service';
+import { SwiperComponent } from 'swiper/angular';
 
 @Component({
   selector: 'app-cart',
@@ -6,7 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
-  constructor() {}
+  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+
+  constructor(public modals: ModalService) {}
 
   ngOnInit() {}
+
+  toCheckout(index) {
+    if (index < 4) {
+      this.swiper?.swiperRef.slideTo(index);
+    } else {
+      this.modals.dismiss({
+        timestamp: Date.now(),
+      });
+    }
+  }
+
+  toOut(num) {
+    if (num == 1) {
+      this.modals.dismiss({
+        timestamp: Date.now(),
+      });
+    } else {
+      this.swiper?.swiperRef.slidePrev();
+    }
+  }
 }

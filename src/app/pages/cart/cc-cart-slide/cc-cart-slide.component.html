@@ -3,7 +3,7 @@
     <div class="b-header-main">
       <div class="menu-icon-outer">
         <ion-buttons slot="start">
-          <ion-button>
+          <ion-button (click)="closeModal()">
             <ion-icon color="light" name="arrow-back-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -15,30 +15,34 @@
 </ion-header>
 <ion-content>
   <app-cart-list-item></app-cart-list-item>
-  <div class="checkout-outer">
-    <div class="apply-code-main">
-      <div class="apply-code">
-        <ion-item class="input">
-          <ion-input placeholder="Add promo code"></ion-input>
-        </ion-item>
-        <ion-buttons slot="start">
-          <ion-button class="button"> APPLY CODE </ion-button>
-        </ion-buttons>
+  <div class="bn765">
+    <div class="checkout-outer">
+      <div class="apply-code-main">
+        <div class="apply-code">
+          <ion-item class="input">
+            <ion-input placeholder="Add promo code"></ion-input>
+          </ion-item>
+          <ion-buttons slot="start">
+            <ion-button class="button volvo"> APPLY CODE </ion-button>
+          </ion-buttons>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="checkout">
-    <div class="checkout-price-main">
-      <div class="checkout-price">
-        <p>
-          TOTAL
-          <br />
-          <span class="price"> $14.97 </span>
-        </p>
+    <div class="checkout">
+      <div class="checkout-price-main">
+        <div class="checkout-price">
+          <ion-text class="price-total poppins">TOTAL</ion-text>
+          <ion-text class="price-rate volvo"> $14.97 </ion-text>
+        </div>
+        <ion-button
+          (click)="openCheckout()"
+          shape="round"
+          color="secondary"
+          class="checkout-button volvo"
+        >
+          CHECKOUT
+        </ion-button>
       </div>
-      <ion-buttons class="checkout-button" slot="start">
-        <div class="button">CHECKOUT</div>
-      </ion-buttons>
     </div>
   </div>
 </ion-content>

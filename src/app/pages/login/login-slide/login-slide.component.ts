@@ -18,6 +18,8 @@ export class LoginSlideComponent extends BasePage implements OnInit {
   @Output('gotoDashboard') gotoDashboard: EventEmitter<any> =
     new EventEmitter<any>();
 
+  passwordType: string = 'password';
+
   aForm;
   constructor(injector: Injector) {
     super(injector);
@@ -29,6 +31,14 @@ export class LoginSlideComponent extends BasePage implements OnInit {
 
   async initialize() {
     this.setupForm();
+  }
+
+  addItem() {
+    if (this.passwordType == 'password') {
+      this.passwordType = 'text';
+    } else {
+      this.passwordType = 'password';
+    }
   }
 
   setupForm() {

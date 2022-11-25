@@ -16,16 +16,25 @@
 <ion-content>
   <swiper class="swiper-outer" #swiper>
     <ng-template swiperSlide class="swiper-inner">
-      <app-cc-cart-slide></app-cc-cart-slide>
+      <app-cc-cart-slide
+        (toCheckout)="toCheckout(1)"
+        (toOut)="toOut(1)"
+      ></app-cc-cart-slide>
     </ng-template>
     <ng-template swiperSlide class="swiper-inner">
-      <app-cc-checkout-slide></app-cc-checkout-slide>
+      <app-cc-checkout-slide
+        (toCheckout)="toCheckout(2)"
+        (toOut)="toOut(2)"
+      ></app-cc-checkout-slide>
     </ng-template>
     <ng-template swiperSlide class="swiper-inner">
-      <app-cc-payment-slide></app-cc-payment-slide>
+      <app-cc-payment-slide
+        (toCheckout)="toCheckout(3)"
+        (toOut)="toOut(3)"
+      ></app-cc-payment-slide>
     </ng-template>
     <ng-template swiperSlide class="swiper-inner">
-      <app-cc-result-slide></app-cc-result-slide>
+      <app-cc-result-slide (toCheckout)="toCheckout(4)"></app-cc-result-slide>
     </ng-template>
   </swiper>
 </ion-content>

@@ -6,7 +6,7 @@
 }
 
 .content-outer {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   padding-top: 49.85%; /* w 335 h 167 ~ 0.4985  1:1 Aspect Ratio */
   position: relative; /* If you want text inside of it */
@@ -24,4 +24,32 @@
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.shade-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading-2633 {
+  font-size: 28px;
+  color: #ffffff;
+}
+.subheading-2633 {
+  font-size: 9px;
+  color: #ffffff;
 }

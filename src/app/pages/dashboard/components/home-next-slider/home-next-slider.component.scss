@@ -16,3 +16,36 @@
   background-position: center center !important;
   background-size: cover !important;
 }
+
+.shade-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading-2633 {
+  font-size: 28px;
+  color: #ffffff;
+  width: 250px;
+  border: 2px solid red;
+}
+.subheading-2633 {
+  font-size: 9px;
+  color: #ffffff;
+}
+.btn-32635 {
+  font-size: 9px;
+}

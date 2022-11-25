@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-location',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location.page.scss'],
 })
 export class LocationPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  slides: any[] = [];
+  constructor(private dataService: DataService) {
+    this.slides = dataService.getHomeCategoriesBoxed();
   }
 
+  ngOnInit() {}
 }

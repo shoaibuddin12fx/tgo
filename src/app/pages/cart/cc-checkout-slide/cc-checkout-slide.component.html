@@ -1,3 +1,79 @@
-<p>
-  cc-checkout-slide works!
-</p>
+<ion-header>
+  <div class="b-header-output">
+    <div class="b-header-main">
+      <div class="menu-icon-outer">
+        <ion-buttons slot="start">
+          <ion-button (click)="closeModal()">
+            <ion-icon color="light" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <h4>Checkout</h4>
+      </div>
+      <div class="main-icon-outer"></div>
+    </div>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="info-cards">
+    <div class="card-heading volvo">Shipping Address</div>
+
+    <div class="b-item-outer-45">
+      <div class="text-box">
+        <div class="heading poppins medium">John Smith</div>
+        <div class="subheading poppins">
+          <ion-text class="lines">No 123, Sub Street,</ion-text>
+          <ion-text class="lines">Main Street,</ion-text>
+          <ion-text class="lines">City Name, Province, Country</ion-text>
+        </div>
+      </div>
+      <div class="edit-icon">
+        <div class="edit-image">
+          <img src="assets/images/icons/edit-icon.svg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card-heading volvo">Payment Method</div>
+    <div class="b-item-outer-46">
+      <div class="text-box">
+        <div class="card-icon">
+          <div class="card-image">
+            <img src="assets/images/icons/card-icon.svg" />
+          </div>
+        </div>
+        <div class="heading poppins medium">Master Card **49</div>
+      </div>
+      <div class="edit-icon">
+        <div class="edit-image">
+          <img src="assets/images/icons/drop-icon.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="card-heading volvo">
+      Items <ion-badge color="primary">3</ion-badge>
+    </div>
+    <app-menu-list-items [limit]="3"></app-menu-list-items>
+  </div>
+
+  <div class="bn765">
+    <div class="checkout">
+      <div class="checkout-price-main">
+        <div class="checkout-price">
+          <ion-text class="price-total poppins">TOTAL</ion-text>
+          <ion-text class="price-rate volvo"> $14.97 </ion-text>
+        </div>
+        <ion-button
+          (click)="openCheckout()"
+          shape="round"
+          color="secondary"
+          class="checkout-button volvo"
+        >
+          CHECKOUT
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

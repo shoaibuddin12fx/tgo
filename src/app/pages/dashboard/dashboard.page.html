@@ -6,18 +6,8 @@
     <ion-searchbar color="light" class="curve-searchbox"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <!-- 
-  <ion-list>
-    <ion-item
-      *ngFor="let item of [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9, ]"
-    >
-      A
-    </ion-item>
-  </ion-list> -->
-
+<ion-content class="bottom-offset">
   <ion-router-outlet></ion-router-outlet>
-
   <app-home-switcher
     (activeIndex)="activeIndex($event)"
     class="page-switcher"

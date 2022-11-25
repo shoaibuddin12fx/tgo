@@ -13,6 +13,8 @@ import { CcCheckoutSlideComponent } from './cc-checkout-slide/cc-checkout-slide.
 import { CcPaymentSlideComponent } from './cc-payment-slide/cc-payment-slide.component';
 import { CcResultSlideComponent } from './cc-result-slide/cc-result-slide.component';
 import { CartListItemComponent } from './cart-list-item/cart-list-item.component';
+import { MenuListItemsModule } from 'src/app/components/menu-list-items/menu-list-items.module';
+import { CartItemComponent } from './cart-list-item/cart-item/cart-item.component';
 // import { MenuListItemsModule } from 'src/app/components/menu-list-items/menu-list-items.module';
 
 @NgModule({
@@ -22,6 +24,7 @@ import { CartListItemComponent } from './cart-list-item/cart-list-item.component
     IonicModule,
     CartPageRoutingModule,
     SwiperModule,
+    MenuListItemsModule,
   ],
   declarations: [
     CartPage,
@@ -30,6 +33,7 @@ import { CartListItemComponent } from './cart-list-item/cart-list-item.component
     CcPaymentSlideComponent,
     CcResultSlideComponent,
     CartListItemComponent,
+    CartItemComponent,
   ],
 })
 export class CartPageModule {}

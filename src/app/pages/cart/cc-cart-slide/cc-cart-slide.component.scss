@@ -80,6 +80,12 @@ ion-content {
     font-size: 14px;
   }
 
+  .bn765 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .price-box {
     .single-box-price {
       display: flex;
@@ -122,12 +128,12 @@ ion-content {
   }
 }
 .checkout-outer {
-  // border: 1px solid red;
   border-top: 1px solid lightgray;
-  // height: 100px;
-  margin: auto;
-  width: 93%;
+  padding: 20px 0;
   margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+
   //   margin-bottom: 250px;
   .apply-code-main {
     // border: 1px solid red;
@@ -176,7 +182,7 @@ ion-content {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
+  padding: 20px;
 
   .checkout-price-main {
     width: 100%;
@@ -187,33 +193,20 @@ ion-content {
     justify-content: space-between;
   }
   .checkout-button {
-    height: 45px;
-    width: 150px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: red;
-    color: white !important;
     font-size: 16px;
   }
   .checkout-price {
     // border: 1px solid red;
     // background: red;
-    width: 150px;
-    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    // margin: 10px
-    p {
+    .price-total {
       font-size: 12px;
     }
-    .price {
-      // width: 150px !important;
+    .price-rate {
       font-size: 30px;
-      // border: 1px solid white;
     }
   }
 }

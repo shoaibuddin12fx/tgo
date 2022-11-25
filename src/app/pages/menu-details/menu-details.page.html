@@ -10,14 +10,6 @@
         <h4>Menu Details</h4>
       </div>
       <div class="main-icon-outer"></div>
-      <div class="combined-icons">
-        <div class="shop-icon-outer">
-          <img src="assets/icons/cart-small.png" />
-        </div>
-        <div class="bell-icon-outer">
-          <img src="assets/icons/bell-small.png" />
-        </div>
-      </div>
     </div>
   </div>
 </ion-header>
@@ -34,6 +26,7 @@
       <h5 class="heading poppins semibold">CHILE CON QUESO & CHIPS</h5>
       <p class="subheading poppins medium">
         Our homemade chile con queso topped with pico de gallo & queso fresco
+        sadas
       </p>
 
       <div class="price-box">
@@ -68,7 +61,7 @@
 
       <div class="menu-items-outer">
         <h5 class="heading poppins semibold">Related Items</h5>
-        <app-menu-list-items></app-menu-list-items>
+        <app-menu-list-items [limit]="3"></app-menu-list-items>
       </div>
     </div>
   </div>

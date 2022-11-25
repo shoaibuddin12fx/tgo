@@ -17,7 +17,7 @@ const profile_items = require('src/app/data/profile-items.json');
 const stores = require('src/app/data/stores.json');
 const dashboard = require('src/app/data/dashboard.json');
 const footerLinks = require('src/app/data/links.json');
-
+const tacos = require('../data/tacos/tacos.json');
 @Injectable({
   providedIn: 'root',
 })
@@ -32,6 +32,10 @@ export class DataService {
 
   constructor() {
     this.searchValueChanged = new BehaviorSubject(null);
+  }
+
+  getTacos() {
+    return tacos;
   }
 
   getFooterLinks() {
