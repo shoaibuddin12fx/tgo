@@ -7,7 +7,7 @@
             <ion-icon color="light" name="arrow-back-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
-        <h4>Menu Details</h4>
+        <h4>{{main_title.title}}</h4>
       </div>
       <div class="main-icon-outer"></div>
     </div>
@@ -17,35 +17,20 @@
 <ion-content>
   <div class="main-menu-img">
     <ion-card class="image-card">
-      <img
-        alt="Silhouette of mountains"
-        src="assets/images/home/square-images/main-menu-img.png"
-      />
+      <img alt="Silhouette of mountains" [src]="menu_details.img" />
     </ion-card>
     <div class="content-outer">
-      <h5 class="heading poppins semibold">CHILE CON QUESO & CHIPS</h5>
-      <p class="subheading poppins medium">
-        Our homemade chile con queso topped with pico de gallo & queso fresco
-        sadas
-      </p>
+      <h5 class="heading poppins semibold">{{menu_details.title}}</h5>
+      <p class="subheading poppins medium">{{menu_details.desc}}</p>
 
-      <div class="price-box">
+      <div class="price-box" *ngFor="let item of menu_details.type">
         <div class="single-box-price">
-          <div class="price-text poppins semibold">Regular</div>
+          <div class="price-text poppins semibold">{{item.name}}</div>
           <div class="mid-line-box">
             <div class="line43"></div>
           </div>
           <div class="price-rate">
-            <ion-text color="primary">$8.99</ion-text>
-          </div>
-        </div>
-        <div class="single-box-price">
-          <div class="price-text poppins semibold">Large</div>
-          <div class="mid-line-box">
-            <div class="line43"></div>
-          </div>
-          <div class="price-rate">
-            <ion-text color="primary">$8.99</ion-text>
+            <ion-text color="primary">{{item.prize}}</ion-text>
           </div>
         </div>
       </div>

@@ -18,6 +18,8 @@ const stores = require('src/app/data/stores.json');
 const dashboard = require('src/app/data/dashboard.json');
 const footerLinks = require('src/app/data/links.json');
 const tacos = require('../data/tacos/tacos.json');
+const menu_details = require('src/app/data/menu-details.json');
+const checkout_detail = require('src/app/data/checkout.json');
 @Injectable({
   providedIn: 'root',
 })
@@ -161,5 +163,11 @@ export class DataService {
 
   getPosition(race_id, driver_id) {
     return {};
+  }
+  getMenuDetail() {
+    return menu_details;
+  }
+  getCheckOutDetail() {
+    return checkout_detail;
   }
 }

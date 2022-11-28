@@ -6,6 +6,7 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { emit } from 'process';
+import { DataService } from 'src/app/services/data.service';
 import { BasePage } from '../base-page/base-page';
 import { CartPage } from '../cart/cart.page';
 
@@ -16,29 +17,18 @@ import { CartPage } from '../cart/cart.page';
 })
 export class MenuDetailsPage extends BasePage implements OnInit {
   @Output() EmitMenu = new EventEmitter<string>();
-  relatedMenu: any = [
-    {
-      name: 'FRESH GUACAMOLE AND CHIPS',
-      regular: '$6.99',
-      Large: '$10.99',
-      url: '../../../../assets/images/tocos/menu/FRESH GUACAMOLE AND CHIPS',
-    },
-    {
-      name: 'CHIPS & SALSA',
-      regular: '$2.99',
-      Large: '$4.99',
-      url: '../../../../assets/images/tocos/menu/CHIPS & SALSA',
-    },
-    {
-      name: 'MEXICAN STREET CORN',
-      regular: '$4.99',
-      Large: '$7.99',
-      url: '../../../../assets/images/tocos/menu/MEXICAN STREET CORN',
-    },
-  ];
+  main_title: any;
+  menu_details: any;
+  allData: any;
+  relatedMenu: any = [];
 
   constructor(injector: Injector) {
     super(injector);
+    const dataService = new DataService();
+    this.allData = dataService.getMenuDetail();
+    this.main_title = this.allData[0];
+    this.menu_details = this.allData[1];
+    console.log(this.menu_details);
   }
 
   ngOnInit() {}

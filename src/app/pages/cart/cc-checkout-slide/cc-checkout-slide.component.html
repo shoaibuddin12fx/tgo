@@ -15,37 +15,37 @@
 </ion-header>
 <ion-content>
   <div class="info-cards">
-    <div class="card-heading volvo">Shipping Address</div>
+    <div class="card-heading volvo">{{ shippingAddress.title }}</div>
 
     <div class="b-item-outer-45">
       <div class="text-box">
-        <div class="heading poppins medium">John Smith</div>
+        <div class="heading poppins medium">{{ shippingAddress.name }}</div>
         <div class="subheading poppins">
-          <ion-text class="lines">No 123, Sub Street,</ion-text>
-          <ion-text class="lines">Main Street,</ion-text>
-          <ion-text class="lines">City Name, Province, Country</ion-text>
+          <ion-text class="lines">{{ shippingAddress.line1 }}</ion-text>
+          <ion-text class="lines">{{ shippingAddress.line2 }}</ion-text>
+          <ion-text class="lines">{{ shippingAddress.line3 }}</ion-text>
         </div>
       </div>
       <div class="edit-icon">
         <div class="edit-image">
-          <img src="assets/images/icons/edit-icon.svg" />
+          <img [src]="shippingAddress.icon" />
         </div>
       </div>
     </div>
 
-    <div class="card-heading volvo">Payment Method</div>
+    <div class="card-heading volvo">{{ paymentMethod.title }}</div>
     <div class="b-item-outer-46">
       <div class="text-box">
         <div class="card-icon">
           <div class="card-image">
-            <img src="assets/images/icons/card-icon.svg" />
+            <img [src]="paymentMethod.img" />
           </div>
         </div>
-        <div class="heading poppins medium">Master Card **49</div>
+        <div class="heading poppins medium">{{ paymentMethod.card_name }}</div>
       </div>
       <div class="edit-icon">
         <div class="edit-image">
-          <img src="assets/images/icons/drop-icon.svg" />
+          <img [src]="paymentMethod.icon" />
         </div>
       </div>
     </div>
@@ -62,8 +62,12 @@
     <div class="checkout">
       <div class="checkout-price-main">
         <div class="checkout-price">
-          <ion-text class="price-total poppins">TOTAL</ion-text>
-          <ion-text class="price-rate volvo"> $14.97 </ion-text>
+          <ion-text class="price-total poppins">{{
+            totalPrice.title
+          }}</ion-text>
+          <ion-text class="price-rate volvo">
+            {{ totalPrice.total_price }}
+          </ion-text>
         </div>
         <ion-button
           (click)="openCheckout()"
