@@ -4,7 +4,7 @@
   <app-home-category-slider-boxes></app-home-category-slider-boxes>
   <app-home-next-slider></app-home-next-slider>
 
-  <div *ngFor="let item of obje">
+  <div *ngFor="let item of obje76; let i = index" [hidden]="i == 0">
     <app-cc-box-layout
       (selection)="openSelection($event)"
       [heading]="item.heading"

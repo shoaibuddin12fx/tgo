@@ -8,13 +8,13 @@ import { BasePage } from '../../base-page/base-page';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage extends BasePage implements OnInit {
-  obje: any[] = [];
+  obje76: any[] = [];
   constructor(injector: Injector) {
     super(injector);
     const dataService = new DataService();
     var dd: any[] = this.dataService.getTacos();
 
-    this.obje = dd.splice(1, 1);
+    this.obje76 = dd;
   }
 
   ngOnInit() {}
