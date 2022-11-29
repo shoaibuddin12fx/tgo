@@ -2,7 +2,7 @@
   <div class="category-slider-outer">
     <div class="heading volvo">
       Our Taco Shops
-      <img src="../../../../../assets/images/icons/location.svg" />
+      <img class="b-5257575" src="assets/images/icons/location.svg" />
     </div>
     <swiper [config]="config" class="swiper-outer" #swiper>
       <ng-template
@@ -19,10 +19,12 @@
           <div class="text-box">
             <div class="top-heading poppins semibold">{{ item.heading }}</div>
             <div class="loc-heading poppins">
-              <ion-icon name="location"></ion-icon>{{ item.location }}
+              <ion-icon [src]="'assets/svgs/location.svg'"></ion-icon
+              >{{ item.location }}
             </div>
             <div class="phn-heading poppins semibold">
-              <ion-icon name="call"></ion-icon>{{ item.phone }}
+              <ion-icon [src]="'assets/svgs/phone.svg'"></ion-icon
+              >{{ item.phone }}
             </div>
           </div>
         </div>

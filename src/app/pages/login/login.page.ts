@@ -57,6 +57,10 @@ export class LoginPage extends BasePage implements OnInit, AfterViewInit {
 
   ngOnInit() {}
 
+  gotoFp() {
+    this.swiper?.swiperRef.slideTo(2);
+  }
+
   gotoSignup() {
     this.swiper?.swiperRef.slideTo(1);
   }

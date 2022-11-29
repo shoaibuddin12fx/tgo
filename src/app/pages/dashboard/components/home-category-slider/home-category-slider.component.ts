@@ -11,9 +11,9 @@ import { SwiperComponent } from 'swiper/angular';
 export class HomeCategorySliderComponent implements OnInit {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   config: SwiperOptions = {
-    slidesPerView: 4,
-    spaceBetween: 40,
-    navigation: false,
+    slidesPerView: 3.5,
+    spaceBetween: 12,
+    navigation: true,
     // pagination: { clickable: true },
     scrollbar: { draggable: false },
   };

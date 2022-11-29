@@ -1,4 +1,11 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import {
+  Component,
+  Injector,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { BasePage } from 'src/app/pages/base-page/base-page';
 import { DataService } from 'src/app/services/data.service';
 
@@ -7,19 +14,15 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './cc-box-layout.component.html',
   styleUrls: ['./cc-box-layout.component.scss'],
 })
-export class CcBoxLayoutComponent extends BasePage implements OnInit {
-  tacos: any;
-  constructor(injector: Injector) {
-    super(injector);
-    const dataService = new DataService();
-    this.tacos = this.dataService.getTacos();
-  }
+export class CcBoxLayoutComponent implements OnInit {
+  @Input('heading') heading = '';
+  @Input('list') list = [];
+  @Output('selection') selection: EventEmitter<any> = new EventEmitter<any>();
+  constructor(injector: Injector) {}
 
-  ngOnInit() {
-    console.log(this.tacos);
-  }
+  ngOnInit() {}
 
-  menuDetails() {
-    this.nav.push('pages/menu-details');
+  menuDetails(item) {
+    this.selection.emit(item);
   }
 }

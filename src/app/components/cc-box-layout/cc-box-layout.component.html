@@ -1,15 +1,15 @@
 <div class="cc-box-outer">
-  <div class="heading volvo">GOURMET TACOS</div>
+  <div class="heading volvo">{{ heading }}</div>
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let taco of tacos" (click)="menuDetails()">
+      <ion-col size="6" *ngFor="let taco of list" (click)="menuDetails(taco)">
         <div class="item-box">
           <div class="item">
             <div
               class="image-box"
-              [style.background]="'url( ' + taco.url + ')'"
+              [style.background]="'url( ' + taco['url'] + ')'"
             ></div>
-            <div>{{ taco.name }}</div>
+            <div class="b-346347 poppins semibold">{{ taco["name"] }}</div>
           </div>
         </div>
       </ion-col>

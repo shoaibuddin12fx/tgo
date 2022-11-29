@@ -7,9 +7,17 @@
             <ion-icon color="light" name="arrow-back-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
-        <h4>{{main_title.title}}</h4>
+        <h4>Menu Details</h4>
       </div>
-      <div class="main-icon-outer"></div>
+      <!-- <div class="main-icon-outer"></div> -->
+      <div class="combined-icons">
+        <div class="shop-icon-outer" (click)="addToCart()">
+          <img src="assets/icons/bell-small.svg" />
+        </div>
+        <div class="bell-icon-outer">
+          <img src="assets/icons/cart-small.svg" />
+        </div>
+      </div>
     </div>
   </div>
 </ion-header>
@@ -17,13 +25,13 @@
 <ion-content>
   <div class="main-menu-img">
     <ion-card class="image-card">
-      <img alt="Silhouette of mountains" [src]="menu_details.img" />
+      <img alt="Silhouette of mountains" [src]="item.url" style="width: 100%" />
     </ion-card>
     <div class="content-outer">
-      <h5 class="heading poppins semibold">{{menu_details.title}}</h5>
-      <p class="subheading poppins medium">{{menu_details.desc}}</p>
+      <h5 class="heading poppins semibold">{{item.name}}</h5>
+      <p class="subheading poppins medium">{{item.description}}</p>
 
-      <div class="price-box" *ngFor="let item of menu_details.type">
+      <div class="price-box" *ngFor="let item of types">
         <div class="single-box-price">
           <div class="price-text poppins semibold">{{item.name}}</div>
           <div class="mid-line-box">
@@ -44,9 +52,12 @@
         ADD TO CART
       </ion-button>
 
+      <hr class="hr-line" />
       <div class="menu-items-outer">
-        <h5 class="heading poppins semibold">Related Items</h5>
-        <app-menu-list-items [limit]="3"></app-menu-list-items>
+        <h5 class="heading poppins semibold">Related Menus</h5>
+        <div *ngFor="let t of objew" [hidden]="item.id == t.id">
+          <app-menu-list-items [list]="t.list"></app-menu-list-items>
+        </div>
       </div>
     </div>
   </div>

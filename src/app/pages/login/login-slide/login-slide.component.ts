@@ -18,6 +18,8 @@ export class LoginSlideComponent extends BasePage implements OnInit {
   @Output('gotoDashboard') gotoDashboard: EventEmitter<any> =
     new EventEmitter<any>();
 
+  @Output('gotoFbp') gotoFbp: EventEmitter<any> = new EventEmitter<any>();
+
   passwordType: string = 'password';
 
   aForm;
@@ -58,6 +60,11 @@ export class LoginSlideComponent extends BasePage implements OnInit {
         ]),
       ],
     });
+  }
+
+  gotoFp() {
+    console.log('peak');
+    this.gotoFbp.emit({ timestamp: Date.now() });
   }
 
   gotoSignupEvent() {

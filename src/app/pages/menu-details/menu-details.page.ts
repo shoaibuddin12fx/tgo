@@ -16,28 +16,53 @@ import { CartPage } from '../cart/cart.page';
   styleUrls: ['./menu-details.page.scss'],
 })
 export class MenuDetailsPage extends BasePage implements OnInit {
+  objew: any[] = [];
   @Output() EmitMenu = new EventEmitter<string>();
-  main_title: any;
-  menu_details: any;
-  allData: any;
-  relatedMenu: any = [];
+  item;
+
+  types = [
+    {
+      name: 'Regular',
+      prize: '$8.99',
+    },
+    {
+      name: 'Large',
+      prize: '$8.99',
+    },
+  ];
 
   constructor(injector: Injector) {
     super(injector);
-    const dataService = new DataService();
-    this.allData = dataService.getMenuDetail();
-    this.main_title = this.allData[0];
-    this.menu_details = this.allData[1];
-    console.log(this.menu_details);
+    // const dataService = new DataService();
+    // this.allData = dataService.getMenuDetail();
+    // this.main_title = this.allData[0];
+    // this.menu_details = this.allData[1];
+    // console.log(this.menu_details);
+
+    const params = this.nav.getQueryParams();
+    if (params['item']) {
+      const r = JSON.parse(params['item']);
+      console.log(r);
+      this.item = r;
+    } else {
+      this.nav.pop();
+      return;
+    }
+
+    // check which list has this item
+
+    this.objew = this.dataService.getTacos();
+    // const id = this.item.id;
+    // if (id < 5) {
+    //   this.objew = this.objew.splice(0, 1);
+    // } else {
+    //   this.objew = this.objew.splice(1, 1);
+    // }
   }
 
   ngOnInit() {}
   back() {
     this.nav.pop();
-  }
-
-  menu() {
-    return this.EmitMenu.emit(this.relatedMenu);
   }
 
   // menu();

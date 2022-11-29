@@ -4,6 +4,7 @@
     "image": "assets/images/home/categories/fish.png",
     "heading": "Wild caught mahi mahi",
     "subheading": "World of Outlaws",
+    "class": true,
     "active": 1
   },
   {

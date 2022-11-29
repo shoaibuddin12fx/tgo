@@ -14,10 +14,17 @@ export class IconInputBoxComponent implements OnInit {
 
   @Output() lefticonClicks = new EventEmitter<string>();
 
+  togglePassword = false;
   constructor() {}
 
   ngOnInit() {}
   lefticonClick() {
     this.lefticonClicks.emit();
+  }
+
+  showPassword() {
+    if (this.type == 'password') {
+      this.togglePassword = !this.togglePassword;
+    }
   }
 }

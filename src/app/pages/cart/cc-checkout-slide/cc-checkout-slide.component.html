@@ -52,10 +52,12 @@
   </div>
 
   <div class="info-cards">
-    <div class="card-heading volvo">
-      Items <ion-badge color="primary">3</ion-badge>
+    <div *ngFor="let item of obje" [hidden]="item.list.length == 6">
+      <div class="card-heading volvo">
+        Items <ion-badge color="primary">{{ item.list.length }}</ion-badge>
+      </div>
+      <app-menu-list-items [list]="item.list"></app-menu-list-items>
     </div>
-    <app-menu-list-items [limit]="3"></app-menu-list-items>
   </div>
 
   <div class="bn765">

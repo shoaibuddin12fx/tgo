@@ -10,7 +10,7 @@
           >
             <div class="image-outer">
               <div
-                class="image-n65"
+                [ngClass]="item.class == true ? 'imagen64' : 'imagen65'"
                 [style.background]="'url(' + item.image + ')'"
               ></div>
               <!-- <img [src]="item.image" /> -->

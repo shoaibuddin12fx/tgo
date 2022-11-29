@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "image": "assets/images/home/square-images/ff.jpeg",
-    "heading": "Sprint",
+    "image": "assets/images/home/square-images/sq1.jpg",
+    "heading": "Spring",
     "subheading": "World of Outlaws",
     "location": "7826 Louto Rd, Spring, Tx 77379 4564646546456465",
-    "phone":"832-534-1166",
+    "phone": "832-534-1166",
     "active": 1
   },
   {
     "id": 2,
-    "image": "assets/images/home/square-images/ff.jpeg",
+    "image": "assets/images/home/square-images/sq2.png",
     "heading": "Katy",
     "subheading": "Fascinating around the world",
     "location": "7826 Louto Rd, Spring, Tx 77379",
-    "phone":"832-534-1166",
+    "phone": "832-534-1166",
     "active": 0
   },
   {
     "id": 3,
-    "image": "assets/images/home/square-images/ff.jpeg",
+    "image": "assets/images/home/square-images/sq3.png",
     "heading": "New Caney",
     "subheading": "Join our next event !!",
     "location": "7826 Louto Rd, Spring, Tx 77379",
-    "phone":"832-534-1166",
+    "phone": "832-534-1166",
     "active": 0
   }
 ]

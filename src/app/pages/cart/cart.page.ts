@@ -8,6 +8,7 @@ import { SwiperComponent } from 'swiper/angular';
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
+  
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
   constructor(public modals: ModalService) {}

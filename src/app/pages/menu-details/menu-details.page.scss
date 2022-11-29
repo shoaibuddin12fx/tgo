@@ -78,6 +78,7 @@ ion-content {
 
   .adc-btn {
     font-size: 14px;
+    width: 40%;
   }
 
   .price-box {
@@ -120,4 +121,8 @@ ion-content {
       }
     }
   }
+}
+.hr-line {
+  background-color: rgba(128, 128, 128, 0.162);
+  margin: 10px auto;
 }

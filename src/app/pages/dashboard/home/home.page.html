@@ -3,5 +3,12 @@
   <app-home-category-slider></app-home-category-slider>
   <app-home-category-slider-boxes></app-home-category-slider-boxes>
   <app-home-next-slider></app-home-next-slider>
-  <app-cc-box-layout></app-cc-box-layout>
+
+  <div *ngFor="let item of obje">
+    <app-cc-box-layout
+      (selection)="openSelection($event)"
+      [heading]="item.heading"
+      [list]="item.list"
+    ></app-cc-box-layout>
+  </div>
 </ion-content>

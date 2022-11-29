@@ -21,6 +21,7 @@
         <app-login-slide
           (gotoSignup)="gotoSignup()"
           (gotoDashboard)="gotoDashboard()"
+          (gotoFbp)="gotoFp()"
           class="w-100"
         ></app-login-slide>
       </ng-template>
@@ -29,6 +30,12 @@
           (gotoLogin)="gotoLogin()"
           class="w-100"
         ></app-signup-slide>
+      </ng-template>
+      <ng-template swiperSlide class="swiper-inner">
+        <app-forgetpassword-slide
+          (gotoSignup)="gotoSignup()"
+          class="w-100"
+        ></app-forgetpassword-slide>
       </ng-template>
       <!-- <ng-template swiperSlide class="swiper-inner">Slide 3</ng-template> -->
     </swiper>
