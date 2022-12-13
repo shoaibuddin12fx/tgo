@@ -20,7 +20,15 @@
   font-style: normal;
   src: url("./../assets/fonts/Poppins-SemiBold.ttf");
 }
+@font-face {
+  font-family: "VolvoBroadProDigital";
+  font-style: normal;
+  src: url("./../assets/fonts/Volvo Broad Pro Digital.ttf");
 
+}
+.VolvoBroadProDigital{
+  font-family: "VolvoBroadProDigital";
+}
 .volvo {
   font-family: "Volvo";
 }

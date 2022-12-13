@@ -26,7 +26,7 @@
   .item-box-inner {
     width: 92px;
     height: 137px;
-    background: #f7f7f7;
+    background:  #063b00 !important;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        color: #ffffff;
         //   background: pink;
       }
     }
