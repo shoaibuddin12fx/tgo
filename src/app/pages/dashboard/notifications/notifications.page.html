@@ -1,0 +1,60 @@
+<ion-header>
+  <div class="b-header-output">
+    <div class="b-header-main">
+      <div class="menu-icon-outer">
+        <ion-buttons slot="start" (click)="back()">
+          <ion-button>
+            <ion-icon color="light" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <h4>Notification</h4>
+      </div>
+      <!-- <div class="main-icon-outer"></div> -->
+      <div class="combined-icons">
+        <div class="shop-icon-outer">
+          <img src="assets/icons/bell-small.svg" />
+        </div>
+        <div class="bell-icon-outer">
+          <img src="assets/icons/cart-small.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-header>
+<ion-content>
+
+  <div class="ma-list-698756">
+    <div class="notification-item" *ngFor="let item of list; let i = index" [style.background]="i % 2 != 0 ? '#ffffff' : 'rgba(141,199,61,0.1)'">
+      <div class="image-box-outer">
+
+        <div class="image-box">
+          <img [src]="item.image" />
+        </div>
+
+      </div>
+      <div class="label-box-outer">
+        <div class="heading-outer">
+          <div class="heading poppinn semibold">{{ item.heading }}</div>
+          <div class="date-outer poppins">{{ item.date }}</div>
+        </div> 
+        <div class="content-outer poppins medium">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <ion-list> -->
+    <!-- <ion-item *ngFor="let item of list" class="notification-item">
+      <ion-avatar class="av-798756">
+        <img [src]="item.image" />
+      </ion-avatar>
+      <ion-label>
+        <h2 class="heading-9875785"><ion-text>{{ item.heading }}</ion-text> <ion-text>{{item.date}}</ion-text></h2>
+        <p> {{ item.content }} </p>
+      </ion-label>
+    </ion-item> -->
+  <!-- </ion-list> -->
+
+</ion-content>

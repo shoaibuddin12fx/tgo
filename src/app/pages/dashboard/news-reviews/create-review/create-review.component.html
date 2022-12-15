@@ -1,0 +1,97 @@
+<div class="main">
+  <div class="select-tacos">
+    <span class="Poppins-medium">Whic of our Tacos Shapes did you visit?</span>
+    <select class="selector">
+      <option class="option">Spring</option>
+      <option>1</option>
+      <option>1</option>
+      <option>1</option>
+    </select>
+  </div>
+  <div class="select-time">
+    <span class="Poppins-medium">When did your Order?</span>
+    <div class="inputs">
+      <input class="input Poppins" placeholder="HH" />
+      <input class="input Poppins" placeholder="MM" />
+      <select class="m">
+        <option class="option Poppins">AM</option>
+        <option>PM</option>
+      </select>
+    </div>
+  </div>
+  <div class="select-order">
+    <span class="Poppins-medium">Whic of our Tacos Shapes did you visit?</span>
+    <select class="selector">
+      <option class="option">In Stiore Dine-In</option>
+      <option>1</option>
+      <option>1</option>
+      <option>1</option>
+    </select>
+  </div>
+  <div class="ratings" *ngFor="let item of [1,2,3]">
+    <span class="Poppins.medium">How was our custormer services?</span>
+    <div class="stars">
+      <img src="../../../../../assets/svgs/selectedstar.svg" />
+      <img src="../../../../../assets/svgs/ratingstar.svg" />
+      <img src="../../../../../assets/svgs/ratingstar.svg" />
+      <img src="../../../../../assets/svgs/ratingstar.svg" />
+      <img src="../../../../../assets/svgs/ratingstar.svg" />
+    </div>
+  </div>
+  <div class="select-time">
+    <span class="Poppins-medium">When did your Order?</span>
+    <div class="inputs">
+      <input class="input Poppins" placeholder="HH" />
+      <input class="input Poppins" placeholder="MM" />
+      <select class="m">
+        <option class="option Poppins">AM</option>
+        <option>PM</option>
+      </select>
+    </div>
+  </div>
+  <div class="tell-us">
+    <span class="Poppins-medium">When did your Order?</span>
+    <textarea class="input Poppins" placeholder="Typing...."></textarea>
+  </div>
+  <div class="choose-file">
+    <span class="Poppins-medium">Do You Have a Photo you would like to share with us regarding you visit?</span>
+    <div class="choose">
+      <div class="file">Choose file</div>
+      <div class="nofile">No filechoosen</div>
+    </div>
+    <ion-label id="profile_image" color="primary" stacked>Please Select 1MB Image | File Type: png, jpg</ion-label>
+  </div>
+  <div class="yes-no">
+    <span class="Poppins-medium">Did You our Cashier have their</span>
+    <div class="checkbox">
+      <div class="input">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Yes</ion-label>
+      </div>
+      <div class="input">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>No</ion-label>
+      </div>
+    </div>
+  </div>
+  <div class="yes-no">
+    <span class="Poppins-medium">Did You our Cashierolor sit amet consectetur adipisicing elit. Itaque, amet?</span>
+    <div class="checkbox">
+      <div class="input">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Yes</ion-label>
+      </div>
+      <div class="input">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>No</ion-label>
+      </div>
+    </div>
+  </div>
+  <div class="name">
+    <span class="Poppins-medium">what is You namey</span>
+    <input placeholder="Jhon* " class="selector" />
+  </div>
+  <div class="button">
+    <ion-button class="" shape="round" color="primary">SUBMIT YOUR REVIEW NOW!</ion-button>
+  </div>
+</div>

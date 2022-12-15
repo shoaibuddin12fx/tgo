@@ -35,12 +35,31 @@ const routes: Routes = [
         loadChildren: () =>
           import('./user/user.module').then((m) => m.UserPageModule),
       },
+    
+      
+    
+
     ],
   },
+  // {
+  //   path: 'products-list',
+  //   loadChildren: () => import('./products-list/products-list.module').then( m => m.ProductsListPageModule)
+  // },
+  // {
+  //   path: 'selected-product',
+  //   loadChildren: () => import('./selected-product/selected-product.module').then( m => m.SelectedProductPageModule)
+  // },
+
+  // {
+  //   path: 'news-reviews',
+  //   loadChildren: () => import('./news-reviews/news-reviews.module').then( m => m.NewsReviewsPageModule)
+  // },
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-})
-export class DashboardPageRoutingModule {}
+}) 
+export class DashboardPageRoutingModule { }

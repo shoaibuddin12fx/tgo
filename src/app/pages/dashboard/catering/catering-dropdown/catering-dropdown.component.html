@@ -1,0 +1,20 @@
+<div class="drop-down-outer" [class.green-background]="showDetail" [class.white-background]="!showDetail">
+  <div class="heading-outer" (click)="showDetail = !showDetail">
+    <div class="Poppins-medium">
+      1. And we have our famous Breakfast Tacos For your morning event as well
+    </div>
+    <img [hidden]="showDetail" src="../../../../../assets/svgs/downdownwhite.svg" />
+    <img [hidden]="!showDetail" src="../../../../../assets/svgs/dropdownarrow.svg" />
+  </div>
+  <div class="content-outer" [hidden]="!showDetail">
+    <div class="text Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius aspernatur recusandae quod nobis
+      totam!</div>
+    <div class="paras Poppins">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+    </div>
+  </div>
+
+</div>

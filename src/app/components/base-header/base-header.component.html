@@ -1,15 +1,15 @@
 <div class="b-header-output">
   <div class="b-header-main">
-    <div class="menu-icon-outer">
-      <img class="menu76" src="assets/icons/menu.png" />
+    <div class="menu-icon-outer" >
+      <img class="menu76" src="assets/icons/menu.png" (click)="menuToggle()" />
       <img src="assets/icons/icon-small.png" />
     </div>
     <div class="main-icon-outer"></div>
     <div class="combined-icons">
-      <div class="shop-icon-outer" (click)="addToCart()">
+      <div class="shop-icon-outer" (click)="gotoNotifications()">
         <img src="assets/icons/bell-small.svg" />
       </div>
-      <div class="bell-icon-outer">
+      <div class="bell-icon-outer" (click)="addToCart()">
         <img src="assets/icons/cart-small.svg" />
       </div>
     </div>

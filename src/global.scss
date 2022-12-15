@@ -57,3 +57,51 @@ ion-toolbar {
 * {
   font-family: Poppins;
 }
+
+.b-header-output {
+  display: block;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #004d22;
+  .b-header-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    // height: 50px;
+    justify-content: space-between;
+    padding: 16px 16px;
+    align-items: center;
+    .menu-icon-outer {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      h4 {
+        color: white;
+        margin-top: 10px;
+        font-size: 22px;
+      }
+      .menu76 {
+        margin-right: 16px;
+      }
+    }
+    .combined-icons {
+      // width: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 21px;
+      .shop-icon-outer {
+        position: relative;
+        display: block;
+        margin-right: 8px;
+      }
+      .bell-icon-outer {
+        position: relative;
+        display: block;
+      }
+    }
+    
+  }
+}

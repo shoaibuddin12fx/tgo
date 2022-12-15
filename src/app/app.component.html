@@ -1,3 +1,44 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" class="sidebarContainer">
+      <ion-content class="sidebarContainer">
+        <!-- work here -->
+
+        <div class="profileContainer">
+          <img src="assets/images/profilePic.png" alt="profile-picture" />
+          <p class="name">John Smith</p>
+          <ion-button class="joinButton" shape="round" (click)="gotoUser()">Profile</ion-button>
+        </div>
+        <div>
+          <ul>
+            <li (click)="gotoHome()"><img src="assets/images/home_icon.png"
+                alt="home_icon" height="20px">
+              <ion-button class="sideBarButtons" expand="full">HOME</ion-button>
+            </li>
+            <li (click)="gotoMerchandise()">
+              <img src="assets/images/cart_icon.png"
+                  alt="home_icon"><ion-button class="sideBarButtons" expand="full">Merchandise</ion-button>
+            </li>
+            <li (click)="gotoCatering()">
+              <img src="assets/images/cart_icon.png"
+                  alt="home_icon"><ion-button class="sideBarButtons" expand="full">Catering</ion-button>
+            </li>
+            <li (click)="gotoReviewlist()">
+              <img src="assets/images/privacy_policy_icon.png"
+              alt="home_icon"> <ion-button class="sideBarButtons" expand="full">News & Reviews</ion-button>
+            </li>
+            <li (click)="logout()" style="margin-top: 46px; background-color:#166A08;">
+              <img src="assets/images/logout_icon.png"
+                  alt="home_icon"><ion-button class="sideBarButtons" expand="full">LOGOUT</ion-button>
+            </li>
+          </ul>
+        </div>
+ 
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+    <!-- <ion-button (click)="openMenu()">OPRN</ion-button> -->
+  </ion-split-pane>
+
 </ion-app>

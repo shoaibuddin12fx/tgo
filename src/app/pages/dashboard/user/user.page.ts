@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BasePage } from '../../base-page/base-page';
+import { NotificationsPage } from '../notifications/notifications.page';
 
 @Component({
   selector: 'app-user',
@@ -15,5 +16,8 @@ export class UserPage extends BasePage implements OnInit {
 
   logout() {
     this.nav.setRoot('pages/login');
+  }
+  gotoNotifications(){
+    this.modals.present(NotificationsPage)
   }
 }
