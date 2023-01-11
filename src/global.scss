@@ -29,6 +29,11 @@
 @import "~swiper/scss";
 @import "~@ionic/angular/css/ionic-swiper";
 
+
+ion-content.padding-bottom-100{
+  --padding-bottom: 100px
+}
+
 ion-toolbar {
   --border: unset !important;
   --border-width: 0 !important;
